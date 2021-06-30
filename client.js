@@ -7,8 +7,9 @@ const connect = function() {
   });
   conn.setEncoding("utf8");
 
-  conn.on("connect", () => {
-    console.log("test");
+  conn.on("connect", (client) => {
+    console.log("Snake is online");
+    conn.write("Name: Pog");
   });
 
  conn.on("data", (data) => {
