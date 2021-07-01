@@ -12,13 +12,13 @@ const connect = function() {
     conn.write("Name: Pog");
     setInterval(() => {
       conn.write("Move: up");
-    }, 50);
+    }, 900);
     setInterval(() => {
       conn.write("Move: left");
     }, 75);
     setInterval(() => {
       conn.write("Move: down");
-    }, 65);
+    }, 1250);
 
 
 
@@ -34,7 +34,7 @@ const connect = function() {
 
   });
 
- conn.on("data", (data) => {
+  conn.on("data", (data) => {
     console.log('server says', data);
   });
 
@@ -45,8 +45,6 @@ const connect = function() {
 };
 
 
-console.log("Connecting...");
-connect();
 
 module.exports = {
   connect,
